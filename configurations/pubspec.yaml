@@ -1,0 +1,47 @@
+name: configurations
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  retrofit: ^2.0.0
+  intl: ^0.17.0
+  logging: ^1.0.1
+  package_info: ^2.0.2
+  shared_preferences: ^2.0.6
+  get_it: ^7.1.3
+
+  # UI
+  flutter_svg: ^0.22.0
+  flutter_screenutil: ^5.0.0+2
+
+  # Service
+  url_launcher: ^6.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+  module:
+    androidX: true
+    androidPackage: com.example.configurations
+    iosBundleIdentifier: com.example.configurations
+flutter_intl:
+  enabled: true
+  class_name: SConfig # Optional. Sets the name for the generated localization class. Default: S
+  main_locale: vi # Optional. Sets the main locale used for generating localization files. Provided value should consist of language code and optional script and country codes separated with underscore (e.g. 'en', 'en_GB', 'zh_Hans', 'zh_Hans_CN'). Default: en
+
+  localizely: # Optional settings if you use Localizely platform. Read more: https://localizely.com/flutter-localization-workflow
+    project_id: # Configured manually or through 'Connect to Localizely' command. Get it from the https://app.localizely.com/projects page.
+    upload_overwrite: # Set to true if you want to overwrite translations with upload. Default: false
+    upload_as_reviewed: # Set to true if you want to mark uploaded translations as reviewed. Default: false
+    ota_enabled: # Set to true if you want to use Localizely Over-the-air functionality. Default: false
